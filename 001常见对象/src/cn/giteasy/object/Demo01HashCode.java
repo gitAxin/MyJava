@@ -2,7 +2,13 @@ package cn.giteasy.object;
 
 import cn.giteasy.common.Student;
 
-public class Demo01_HashCode {
+/**
+ * Demo class
+ *
+ * @author axin
+ * @date 2021/8/27
+ */
+public class Demo01HashCode {
     public static void main(String[] args) {
         Object o = new Object();
         int hashCode = o.hashCode();

@@ -1,8 +1,13 @@
 package cn.giteasy.object;
 
 import cn.giteasy.common.Student;
-
-public class Demo02_GetClass {
+/**
+ * Demo class
+ *
+ * @author axin
+ * @date 2021/8/27
+ */
+public class Demo02GetClass {
 
     public static void main(String[] args) {
         Student student = new Student("axin",18);
