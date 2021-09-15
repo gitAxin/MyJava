@@ -20,24 +20,33 @@ public class Demo01HashSet {
 		hs.add(new Person("李四", 24));
 		hs.add(new Person("李四", 24));
 		
-		//System.out.println(hs.size());
+		System.out.println(hs.size());
 		System.out.println(hs);
 	}
 
 	public static void demo1() {
 		HashSet<String> hs = new HashSet<>();					//创建HashSet对象
 		boolean b1 = hs.add("a");
-		boolean b2 = hs.add("a");								//当向set集合中存储重复元素的时候返回为false
+		boolean b2 = hs.add("a");  //当向set集合中存储重复元素的时候返回为false
+		System.out.println(b1);//true
+		System.out.println(b2);//false
 		hs.add("b");
 		hs.add("c");
 		hs.add("d");
-		System.out.println(hs);									//HashSet的继承体系中有重写toString方法
-		System.out.println(b1);
-		System.out.println(b2);
+		System.out.println(hs);			//[a, b, c, d]	//HashSet的继承体系中有重写toString方法
+
 		
 		for (String string : hs) {								//只要能用迭代器迭代的,就可以使用增强for循环遍历
 			System.out.println(string);
 		}
+		/*
+		* 输出结果:
+		* 	a
+		*	b
+		*	c
+		*	d
+		*
+		*/
 	}
 
 }
