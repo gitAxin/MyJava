@@ -2,7 +2,7 @@ package cn.giteasy.set;
 
 import java.util.LinkedHashSet;
 
-public class Demo02LinkedHashSet {
+public class Demo03LinkedHashSet {
 
 	/**
 	 * @param args
@@ -20,7 +20,7 @@ public class Demo02LinkedHashSet {
 		lhs.add("c");
 		lhs.add("d");
 		
-		System.out.println(lhs);
+		System.out.println(lhs);//[a, b, c, d]
 	}
 
 }

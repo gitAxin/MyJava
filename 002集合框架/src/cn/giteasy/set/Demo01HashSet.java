@@ -13,14 +13,14 @@ public class Demo01HashSet {
 	public static void main(String[] args) {
 		//demo1();
 		HashSet<Person> hs = new HashSet<>();
-		hs.add(new Person("张三", 23));
-		hs.add(new Person("张三", 23));
-		hs.add(new Person("李四", 24));
-		hs.add(new Person("李四", 24));
-		hs.add(new Person("李四", 24));
-		hs.add(new Person("李四", 24));
+		hs.add(new Person("zhangsan", 23));
+		hs.add(new Person("zhangsan", 23));
+		hs.add(new Person("lisi", 24));
+		hs.add(new Person("lisi", 24));
+		hs.add(new Person("lisi", 24));
+		hs.add(new Person("lisi", 24));
 		
-		System.out.println(hs.size());
+		System.out.println(hs.size());//6
 		System.out.println(hs);
 	}
 
