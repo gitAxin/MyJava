@@ -3,7 +3,7 @@ package cn.giteasy.set;
 import java.util.HashSet;
 import java.util.Random;
 
-public class Test1 {
+public class Test1{
 
 	/**
 	 * * A:案例演示
@@ -31,7 +31,7 @@ public class Test1 {
 			System.out.print(integer + ",");
 		}
 		//输出结果:16,1,18,2,3,4,9,10,11,13,
-		
+		System.out.println("郝家信");
 	}
 
 }

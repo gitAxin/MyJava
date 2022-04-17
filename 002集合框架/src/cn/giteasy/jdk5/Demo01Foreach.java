@@ -24,7 +24,7 @@ public class Demo01Foreach {
 	 */
 	public static void main(String[] args) {
 		//demo1();
-		//demo2();
+		demo2();
 		ArrayList<String> list = new ArrayList<>();
 		list.add("a");
 		list.add("b");
@@ -57,11 +57,11 @@ public class Demo01Foreach {
 			}
 		}*/
 		//3,增强for循环,增强for循环不能删除,只能遍历
-		for (String string : list) {
-			if("b".equals(string)) {
-				list.remove("b"); //运行异常:java.util.ConcurrentModificationException
-			}
-		}
+		//for (String string : list) {
+		//	if("b".equals(string)) {
+		//		list.remove("b"); //运行异常:java.util.ConcurrentModificationException
+		//	}
+		//}
 		System.out.println(list);
 	}
 
