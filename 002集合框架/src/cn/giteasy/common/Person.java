@@ -1,6 +1,8 @@
 package cn.giteasy.common;
 
-public class Person {
+import java.util.Objects;
+
+public class Person implements Comparable<Student>{
 	private String name;
 	private int age;
 	public Person() {
@@ -30,9 +32,18 @@ public class Person {
 	}
 
 	@Override
+	public int hashCode() {
+		return Objects.hash(name, age);
+	}
+
+	@Override
 	public boolean equals(Object obj) {
 		Person p = (Person)obj;
 		return this.name.equals(p.name) && this.age == p.age;
 	}
-	
+
+	@Override
+	public int compareTo(Student o) {
+		return this.age - o.getAge();
+	}
 }

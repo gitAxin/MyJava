@@ -1,6 +1,6 @@
 package cn.giteasy.common;
 
-public class Student extends Person{
+public class Student extends Person {
 
     public Student() {
     }
