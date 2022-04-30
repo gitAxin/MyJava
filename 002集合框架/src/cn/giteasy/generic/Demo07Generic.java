@@ -28,10 +28,12 @@ public class Demo07Generic {
 
 		//可以将子类对象的集合 添加到 父类对象的集合中
 		list1.addAll(list2);
-		//[Person [name=person1, age=23], Person [name=person2, age=24], Person [name=student1, age=26]]
+
 		System.out.println(list1);
 
 		
 	}
+
+
 
 }

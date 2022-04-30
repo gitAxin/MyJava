@@ -28,14 +28,14 @@ public class Demo6HashMapHashMap {
 		map2.put(new Student("沙和尚",1026), "广州");
 		
 		//定义嵌套集合
-		HashMap<HashMap<Student, String>, String> hm = new HashMap<>();
-		hm.put(map1, "map1");
-		hm.put(map2, "map2");
+		HashMap<HashMap<Student, String>, String> hashMap = new HashMap<>();
+		hashMap.put(map1, "map1");
+		hashMap.put(map2, "map2");
 
 
 		//遍历双列集合
-		for(HashMap<Student, String> h : hm.keySet()) {		//hm.keySet()代表的是双列集合中键的集合
-			String value = hm.get(h);						//get(h)根据键对象获取值对象
+		for(HashMap<Student, String> h : hashMap.keySet()) {		//hm.keySet()代表的是双列集合中键的集合
+			String value = hashMap.get(h);						//get(h)根据键对象获取值对象
 			//遍历键的双列集合对象
 			for(Student key : h.keySet()) {					//h.keySet()获取集合总所有的学生键对象
 				String value2 = h.get(key);

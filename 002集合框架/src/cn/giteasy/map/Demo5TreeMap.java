@@ -14,11 +14,11 @@ public class Demo5TreeMap {
 
 	@Test
 	public void demo1() {
-		TreeMap<Student, String> tm = new TreeMap<>();
-		tm.put(new Student("张三", 23), "北京");
-		tm.put(new Student("李四", 13), "上海");
-		tm.put(new Student("王五", 33), "广州");
-		tm.put(new Student("赵六", 43), "深圳");
+		TreeMap<Student, String> treeMap = new TreeMap<>();
+		treeMap.put(new Student("张三", 23), "北京");
+		treeMap.put(new Student("李四", 13), "上海");
+		treeMap.put(new Student("王五", 33), "广州");
+		treeMap.put(new Student("赵六", 43), "深圳");
 		/**
 		 * 如果Student未实现Comparable,将报如下错误:
 		 *
@@ -30,7 +30,7 @@ public class Demo5TreeMap {
 		 * {Person [name=李四, age=13]=上海, Person [name=张三, age=23]=北京, Person [name=王五, age=33]=广州, Person [name=赵六, age=43]=深圳}
 		 */
 
-		System.out.println(tm);
+		System.out.println(treeMap);
 	}
 
 	/**
@@ -38,20 +38,21 @@ public class Demo5TreeMap {
 	 */
 	@Test
 	public void demo2(){
-		TreeMap<Student, String> tm = new TreeMap<>(new Comparator<Student>() {
+		TreeMap<Student, String> treeMap = new TreeMap<>(new Comparator<Student>() {
 
 			@Override
 			public int compare(Student s1, Student s2) {
-				int num = s1.getName().compareTo(s2.getName());		//按照姓名比较
-				return num == 0 ? s1.getAge() - s2.getAge() : num;
+
+				return s1.getAge() - s2.getAge();//按照年龄比较
 			}
 		});
-		tm.put(new Student("张三", 23), "北京");
-		tm.put(new Student("李四", 13), "上海");
-		tm.put(new Student("赵六", 43), "深圳");
-		tm.put(new Student("王五", 33), "广州");
+		treeMap.put(new Student("张三", 23), "北京");
+		treeMap.put(new Student("李四", 13), "上海");
+		treeMap.put(new Student("赵六", 43), "深圳");
+		treeMap.put(new Student("王五", 33), "广州");
 
-		System.out.println(tm);
+		System.out.println(treeMap);
+		//{Person [name=李四, age=13]=上海, Person [name=张三, age=23]=北京, Person [name=王五, age=33]=广州, Person [name=赵六, age=43]=深圳}
 	}
 
 
