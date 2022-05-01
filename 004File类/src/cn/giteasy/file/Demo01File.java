@@ -21,13 +21,13 @@ public class Demo01File {
 	public void demo1() {
 		//
 		File file = new File("folder_a\\a.txt");
-		System.out.println(file.exists());
+		System.out.println(file.exists());//true
 
 		File file2 = new File("b.txt");
-		System.out.println(file2.exists());
+		System.out.println(file2.exists());//true
 
 		File file3 = new File("c.txt");
-		System.out.println(file3.exists());
+		System.out.println(file3.exists());//false
 	}
 
 	/**
@@ -35,10 +35,11 @@ public class Demo01File {
 	 */
 	@Test
 	public void demo2() {
-		String parent = "F:\\双元课堂\\day19\\video";
-		String child = "001_今日内容.avi";
+		String parent = "folder_b\\sub_b";
+		String child = "file.txt";
 		File file = new File(parent,child);
-		System.out.println(file.exists());
+		System.out.println(file.exists());//true
+
 	}
 
 	/**
@@ -46,11 +47,11 @@ public class Demo01File {
 	 */
 	@Test
 	public void demo3() {
-		File parent = new File("F:\\双元课堂\\day19\\video");
-		String child = "001_今日内容.avi";
+		File parent = new File("folder_b\\sub_b");
+		String child = "file.txt";
 		File file = new File(parent, child);
-		System.out.println(file.exists());
-		System.out.println(parent.exists());
+		System.out.println(file.exists());//true
+		System.out.println(parent.exists());//true
 	}
 
 

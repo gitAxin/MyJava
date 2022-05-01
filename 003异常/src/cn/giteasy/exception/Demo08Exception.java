@@ -16,11 +16,11 @@ public class Demo08Exception {
 		try {
 			student.setAge(200);
 		} catch (AgeException e) {
+			System.out.println(e.getMessage());
+			System.out.println("====================");
 			e.printStackTrace();
-			e.getMessage();
+
 		}
-
-
 	}
 
 }

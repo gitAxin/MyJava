@@ -18,14 +18,12 @@ public class Test01 {
 	 *     如果catch里面有return语句，请问finally的代码还会执行吗?如果会，请问是在return前还是return后。答，会，在return后。
 	 */
 	public static void main(String[] args) {
-		Demo d = new Demo();
-		System.out.println(d.method());
+		int res = method();
+		System.out.println(res);
 	}
 
-}
 
-class Demo {
-	public int method() {
+	public static int method() {
 		int x = 10;
 		try {
 			x = 20;
@@ -37,7 +35,9 @@ class Demo {
 		} finally {
 			x = 40;
 			//return x;					千万不要在finally里面写返回语句,因为finally的作用是为了释放资源,是肯定会执行的
-										//如果在这里面写返回语句,那么try和catch的结果都会被改变,所以这么写就是犯罪
+			//如果在这里面写返回语句,那么try和catch的结果都会被改变,所以这么写就是错误
 		}
 	}
+
 }
+

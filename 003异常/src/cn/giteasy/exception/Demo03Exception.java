@@ -62,7 +62,7 @@ public class Demo03Exception {
 	 *       }
 	 *
 	 *       注意事项：
-	 *         这个方法虽然简介，但不实用
+	 *         这个方法虽然简单，但不实用
 	 */
 	@Test
 	public void demo2() {
