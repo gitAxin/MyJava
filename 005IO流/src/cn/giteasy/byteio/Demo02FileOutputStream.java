@@ -1,4 +1,4 @@
-package cn.giteasy.io;
+package cn.giteasy.byteio;
 
 import org.junit.Test;
 
@@ -9,19 +9,6 @@ import java.io.IOException;
 public class Demo02FileOutputStream {
 
 
-	/**
-	 * 字节输出流追加
-	 * 如果想追加数据，可传入第二个参数：true
-	 */
-	@Test
-	public void demo2() throws IOException {
-
-		FileOutputStream fos = new FileOutputStream("output.txt",true);	//如果想续写就在第二个参数传true
-		fos.write(97);
-		fos.write(98);
-		
-		fos.close();
-	}
 
 	/**
 	 * FileOutputStream在创建对象的时候，如果没有这个文件会自动创建
@@ -38,5 +25,20 @@ public class Demo02FileOutputStream {
 		fos.write(100);
 		fos.close();
 	}
+	/**
+	 * 字节输出流追加
+	 * 如果想追加数据，可传入第二个参数：true
+	 */
+	@Test
+	public void demo2() throws IOException {
+
+		FileOutputStream fos = new FileOutputStream("output.txt",true);	//如果想续写就在第二个参数传true
+		fos.write(97);
+		fos.write(98);
+		
+		fos.close();
+	}
+
+
 
 }

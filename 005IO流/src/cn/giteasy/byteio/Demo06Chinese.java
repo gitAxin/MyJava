@@ -1,4 +1,4 @@
-package cn.giteasy.io;
+package cn.giteasy.byteio;
 
 import org.junit.Test;
 
@@ -17,6 +17,7 @@ public class Demo06Chinese {
 	@Test
 	public void demo1() throws FileNotFoundException, IOException {
 		FileInputStream fis = new FileInputStream("chinese.txt");
+		//在此处一个中文是三个字节，所以定义3个字节的数组，具体是几个字节，要根据编码字会集而定
 		byte[] arr = new byte[3];
 		int len;
 		while((len = fis.read(arr)) != -1) {
@@ -37,7 +38,7 @@ public class Demo06Chinese {
 	@Test
 	public void demo2() throws IOException {
 		FileOutputStream fos = new FileOutputStream("chinese_out.txt");
-		fos.write("泉眼无声惜细流，树阴照水爱晴柔。".getBytes());
+		fos.write("小河才露尖尖角，早有蜻蜓立上头。".getBytes());
 		fos.write("\r\n".getBytes());
 		fos.close();
 	}

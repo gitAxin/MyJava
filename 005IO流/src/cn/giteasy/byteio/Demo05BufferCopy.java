@@ -1,4 +1,4 @@
-package cn.giteasy.io;
+package cn.giteasy.byteio;
 
 import org.junit.Test;
 
@@ -30,7 +30,7 @@ public class Demo05BufferCopy {
 		 * 缓冲输出流内部缓冲区8192个字节（查看源码可知，默认）被写满时，会将这一批一次性写入输出流中（文件）
 		 *
 		 * 虽然每次循环返回1个字节，再写入1个字节，但这都是在内存中完成的，效率还是非常快的。
-		 * 而从硬盘读取数据和写入数据到硬盘的环节，相比文件输入流和文件输出流已经减少了读写次数。
+		 * 而从硬盘读取数据和写入数据到硬盘的环节，相比非缓冲输入流和非缓冲输出流已经减少了读写次数。
 		 */
 		int b;
 		while((b = bis.read()) != -1) {
@@ -45,7 +45,7 @@ public class Demo05BufferCopy {
 	/**
 	 *
 	 * close方法
-	 * 具备刷新的功能,在关闭流之前,就会先刷新一次缓冲区,将缓冲区的字节全都刷新到文件上,再关闭,close方法刷完之后就能写了
+	 * 具备刷新的功能,在关闭流之前,就会先刷新一次缓冲区,将缓冲区的字节全都刷新到文件上,再关闭,close方法刷完之后就不能再写出了
 	 * flush方法?
 	 * 具备刷新的功能,刷完之后还可以继续写
 	 */
@@ -58,9 +58,23 @@ public class Demo05BufferCopy {
 		int b;
 		while((b = bis.read()) != -1) {
 			bos.write(b);
+			//bos.close();
+			//bos.flush();
 		}
+		//bos.flush();
 		bis.close();
 		bos.close();
+
 	}
+
+
+	/**
+	 *
+	 * 小数组的读写和带Buffered的读取哪个更快?
+	 *
+	 * 定义小数组如果是8192个字节大小和Buffered比较的话，定义小数组会略胜一筹,因为读和写操作的是同一个数组，而Buffered操作的是两个数组
+	 *
+	 *
+	 */
 
 }

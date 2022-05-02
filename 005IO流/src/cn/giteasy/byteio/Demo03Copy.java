@@ -1,4 +1,4 @@
-package cn.giteasy.io;
+package cn.giteasy.byteio;
 
 import org.junit.Test;
 
@@ -73,7 +73,7 @@ public class Demo03Copy {
 		//将字节数组中的字节数据写到文件上
 		fos.write(arr);
 		long end = System.currentTimeMillis();
-		System.out.println("耗时:" + (end - start));//耗时:13036
+		System.out.println("耗时:" + (end - start));//耗时:323
 
 		fis.close();
 		fos.close();

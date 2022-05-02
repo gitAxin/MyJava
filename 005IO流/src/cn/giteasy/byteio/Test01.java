@@ -1,4 +1,4 @@
-package cn.giteasy.io;
+package cn.giteasy.byteio;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
