@@ -16,10 +16,10 @@ public class Demo02ByteArrayOutputStream {
 	@Test
 	public void demo1() throws  IOException {
 		FileInputStream fis = new FileInputStream("other\\chinese_input.txt");
-		byte[] arr = new byte[4];
-		int len;
-		while((len = fis.read(arr)) != -1) {
-			System.out.println(new String(arr,0,len));
+
+		int b;
+		while((b = fis.read()) != -1) {
+			System.out.print(new String(new byte[]{(byte)b}));
 		}
 		
 		fis.close();
@@ -48,13 +48,13 @@ public class Demo02ByteArrayOutputStream {
 		System.out.println("==========================");
 
 		System.out.println(baos.toString());								//将缓冲区的内容转换为了字符串,在输出语句中可以省略调用toString方法
-		fis.close();
 
 		/**
 		 * ByteArrayOutputStream无需关闭流，
 		 * 因为它并没有对接硬盘上的文件，而是在内存中开辟了一块区域，
 		 * 就像使用集合一样，不使用了，它会被JVM垃圾回收释放。
 		 */
+		fis.close();
 	}
 
 

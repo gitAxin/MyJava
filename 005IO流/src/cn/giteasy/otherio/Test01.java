@@ -12,7 +12,7 @@ import java.io.IOException;
  * 定义一个文件输入流,调用read(byte[] b)方法,将chinese_input.txt文件中的内容打印出来(byte数组大小限制为5)
  *
  * 分析:
- * 1.reda(byte[] b)是字节输入流的方法,创建FileInputStream,关联a.txt
+ * 1.reda(byte[] b)是字节输入流的方法,创建FileInputStream,关联chinese_input.txt
  * 2.创建内存输出流
  * 3.创建字节数组,长度为5
  * 4.读取输入流中所有数据，分多次读取，每次读取5个字节，将读到的数据写到内存输出流中。
@@ -27,7 +27,7 @@ public class Test01 {
 
 	@Test
 	public void test() throws IOException {
-		//1.reda(byte[] b)是字节输入流的方法,创建FileInputStream,关联a.txt
+		//1.reda(byte[] b)是字节输入流的方法,创建FileInputStream,关联chinese_input.txt
 		FileInputStream fis = new FileInputStream("other\\chinese_input.txt");
 		//2.创建内存输出流
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
