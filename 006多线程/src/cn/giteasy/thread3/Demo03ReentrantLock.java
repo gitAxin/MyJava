@@ -5,6 +5,14 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * JDK1.5的新特性互斥锁
+ *
+ *
+ * 同步
+ *   使用ReentrantLock类的lock()和unlock()方法进行同步
+ * 通信
+ *   使用ReentrantLock类的newCondition()方法可以获取Condition对象
+ *   需要等待的时候使用Condition的await()方法, 唤醒的时候用signal()方法
+ *   不同的线程使用不同的Condition, 这样就能区分唤醒的时候找哪个线程了
  */
 public class Demo03ReentrantLock {
 
