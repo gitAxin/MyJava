@@ -1,6 +1,6 @@
-# Java基础学习代码
+# Java基础
 
-### 目录
+### 代码目录
 - [001 常见对象](https://github.com/gitaxin/MyJava/tree/master/001常见对象)
 - [002 集合框架](https://github.com/gitaxin/MyJava/tree/master/002集合框架)
 - [003 异常](https://github.com/gitaxin/MyJava/tree/master/003异常)
@@ -13,6 +13,6 @@
 - [010 反射](https://github.com/gitaxin/MyJava/tree/master/010反射)
 - [011 新特性](https://github.com/gitaxin/MyJava/tree/master/011新特性)
 
-### 笔记
+### 学习笔记
 [https://www.yuque.com/xinblog/java/](https://www.yuque.com/xinblog/java/)
 
