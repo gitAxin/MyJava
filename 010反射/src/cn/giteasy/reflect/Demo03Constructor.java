@@ -56,15 +56,4 @@ public class Demo03Constructor {
 	}
 
 
-
-
-	public static void main(String[] args) throws Exception {
-		Class clazz = Class.forName("com.heima.bean.Person");
-		//Person p = (Person) clazz.newInstance();				通过无餐构造创建对象
-		//System.out.println(p);
-		Constructor c = clazz.getConstructor(String.class,int.class);	//获取有参构造
-		Person p = (Person) c.newInstance("张三",23);						//通过有参构造创建对象
-		System.out.println(p);
-	}
-
 }

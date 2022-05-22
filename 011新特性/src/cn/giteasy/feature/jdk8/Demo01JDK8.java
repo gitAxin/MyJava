@@ -36,7 +36,7 @@ public class Demo01JDK8 {
     public void demo2(){
         /**
          * JDK1.8之前必需要加final
-         * JDK1.8起可以省略final,
+         * JDK1.8起可以省略final
          */
         //final int var = 1;
         int var = 1;

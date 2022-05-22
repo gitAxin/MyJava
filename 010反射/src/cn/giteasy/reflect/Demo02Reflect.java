@@ -65,6 +65,7 @@ public class Demo02Reflect {
 	}
 }
 
+//动物
 interface Animal {
 	public void eat();
 }

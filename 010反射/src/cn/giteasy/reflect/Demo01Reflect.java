@@ -10,9 +10,13 @@ public class Demo01Reflect {
 
 
 	public static void main(String[] args) throws ClassNotFoundException {
+		//方式一
 		Class clazz1 = Class.forName("cn.giteasy.common.Person");
+
+		//方式二
 		Class clazz2 = Person.class;
-		
+
+		//方式三
 		Person p = new Person();
 		Class clazz3 = p.getClass();
 		

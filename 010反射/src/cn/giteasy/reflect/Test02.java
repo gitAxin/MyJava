@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 /**
  * 练习：
  * 通过反射写一个通用的设置，可设置某个对象的某个属性为指定的值
- * 	public void setProperty(Object obj, String propertyName, Object value){}，
+ * 	public static void setProperty(Object obj, String propertyName, Object value){}，
  * 此方法可将obj对象中名为propertyName的属性的值设置为value。
  */
 public class Test02 {

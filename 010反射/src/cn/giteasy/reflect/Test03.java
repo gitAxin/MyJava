@@ -9,7 +9,7 @@ import java.io.FileReader;
  * 已知一个类，定义如下：
  * 		class Rabbit {
  *			public void run() {
- *				System.out.println("run......");
+ *				System.out.println("Rabbit are run......");
  *			}
  * 		}
  * 1. 写一个Properties格式的配置文件，配置类的完整名称。
