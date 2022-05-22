@@ -1,8 +1,8 @@
 # Java基础学习代码
 
 ### 目录
-- [001 常见对象]()
-- [002 集合框架]()
+- [001 常见对象](https://github.com/gitaxin/MyJava/tree/master/001常见对象)
+- [002 集合框架](https://github.com/gitaxin/MyJava/tree/master/002集合框架)
 - [003 异常]()
 - [004 文件操作]()
 - [005 流]()
